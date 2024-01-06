@@ -2,10 +2,115 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: hsl(0, 100%, 74%)  ;
-  background-image: url(./assets/images/bg-intro-desktop.png);
-  z-index: 0;
-  justify-content: center;
-  align-content: center;
-  /* font-size: 16px */
 }
+body{
+  background-image: url(./assets/images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%)  ;
+  min-height: 70vh;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  align-items: center;
+  gap: 100px;
+}
+
+.left {
+  width: 450px;
+  margin: 50px;
+  color: #FFFFFF;
+}
+
+.rigth{
+  text-align: center;
+}
+
+.input {
+  width: 400px;
+  border-radius: 5px;
+  padding: 15px 50px 15px 30px;
+  font-size: 16px;
+  border: 1px solid gray;
+  background-color: #FFFFFF;
+  color: #000000;
+  outline: 1px solid #0000;
+}
+
+.errorInput{
+border: 1px solid hsl(0, 100%, 74%)  ;
+color: hsl(0, 100%, 74%)  ;
+}
+
+h1{
+  font-size: 54px;
+
+}
+
+
+.input:focus{
+  border:  1px solid  hsl(246, 25%, 77%) ;
+}
+/* Style de base pour .button */
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px; 
+  font-size: 16px;
+  background-color: hsl(154, 59%, 51%);
+  color: #FFFFFF;
+  box-shadow: inset -2px -4px #2CA06E;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Style au survol de .button */
+.button:hover {
+  background-color: #1D6948;
+  color: #FFFFFF;
+  border-color: #1D6948;
+  transform: scale(1.05); /* Légèrement agrandir le bouton au survol */
+  cursor: pointer;
+  box-shadow: inset -2px -4px #2CA06E, 0px 0px 10px rgba(0, 0, 0, 0.3); /* Ajouter une ombre externe */
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: inset 0px -4px rgba(0, 0, 0, 0.681); /* ombre avec une opacité de 0.3 */
+}
+
+
+@media (max-wIdth: 375px) {
+  .container{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .left{
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+  }
+  .rigth{
+    width: 350px;
+  }
+  .input{
+
+  width: 290px;
+  margin: 0;
+  padding-left: 20px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  /* .left p {
+    font-size: 12px;
+  } */
+}
+
+
